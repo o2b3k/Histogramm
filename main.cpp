@@ -16,6 +16,11 @@ int main() {
 
     for (int x = 0; x < 256; x++)   normal [x] = 0;
     for (int x = 0; x < img.rows; x++)  for(int y = 0; y < img.cols; y++)   normal[(img.at<uchar>(x,y))]+=1;
-
+    
+    for(int i=0; x<256; x++){
+     normal[x]/=(img.rows*img.cols);
+     q[x] = round((255*normal[x]));
+     cout<<x<<"-->"<<normal[x]<<"s-->"<<q[x]<<endI;
+    }
     return 0;
 }

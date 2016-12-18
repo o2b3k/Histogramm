@@ -53,5 +53,13 @@ int main() {
             pix[x] = 255;
         }
     }
+        for (int x = 0; x < res.rows; x++)  for (int z = 0; z < res.cols; z++)  for (int y = 0; y < l; y++)
+                if (q[res.at<uchar>(x, z)] == s_[y])    res.at<uchar>(x, z) = (uchar) pix[y];
+
+    namedWindow("Original",CV_WINDOW_AUTOSIZE);
+    namedWindow("Result",CV_WINDOW_AUTOSIZE);
+    imshow("Original", img);
+    imshow("Result", res);
+    waitKey(0);
     return 0;
 }

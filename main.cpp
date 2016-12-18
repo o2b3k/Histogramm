@@ -53,6 +53,9 @@ int main() {
             pix[x] = 255;
         }
     }
+    for (int x = 0; x < 256; x++)   s[x] = round((255*user[x]));
+    for(int x = 0; x < 256; x++)    temp[x] = q[x];
+
         for (int x = 0; x < res.rows; x++)  for (int z = 0; z < res.cols; z++)  for (int y = 0; y < l; y++)
                 if (q[res.at<uchar>(x, z)] == s_[y])    res.at<uchar>(x, z) = (uchar) pix[y];
 

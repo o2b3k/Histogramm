@@ -53,6 +53,24 @@ int main() {
             pix[x] = 255;
         }
     }
+    
+    if (b==0){
+            for(int z = 0; z <= l;z++)    if (q_[z] == s[pos2]);
+
+            if (con == 0) {
+                q_[l] = s[pos2];
+                s_[l] = temp[pos1];
+                l++;
+
+                for (int z = x; z < 256; z++)   if (s[z] == s[x]) {
+                                                    s_[l] = temp[pos1];
+                                                    q_[l] = s[x];
+                                                    l++;
+                                                }
+                temp[pos1] = -1;
+            }
+        }
+    }
     for (int x = 0; x < 256; x++)   s[x] = round((255*user[x]));
     for(int x = 0; x < 256; x++)    temp[x] = q[x];
 
